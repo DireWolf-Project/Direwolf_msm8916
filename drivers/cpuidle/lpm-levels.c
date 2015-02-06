@@ -496,7 +496,7 @@ static int cluster_configure(struct lpm_cluster *cluster, int idx,
 	}
 	if (level->notify_rpm) {
 		struct cpumask nextcpu, *cpumask;
-                uint32_t us;
+		uint64_t us;
 
 		us = get_cluster_sleep_time(cluster, &nextcpu, from_idle);
 		cpumask = level->disable_dynamic_routing ? NULL : &nextcpu;
